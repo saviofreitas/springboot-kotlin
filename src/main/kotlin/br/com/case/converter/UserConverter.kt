@@ -3,7 +3,9 @@ package br.com.case.converter
 import br.com.case.api.request.UserRequest
 import br.com.case.api.response.UserResponse
 import br.com.case.model.User
+import org.springframework.stereotype.Component
 
+@Component
 class UserConverter {
 
     fun toResponse(user: User): UserResponse {

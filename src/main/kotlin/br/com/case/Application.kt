@@ -8,7 +8,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@EnableConfigurationProperties
 @EnableJpaRepositories("br.com.case.repository")
 class Application
 

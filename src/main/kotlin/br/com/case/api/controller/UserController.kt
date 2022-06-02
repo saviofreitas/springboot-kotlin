@@ -7,9 +7,13 @@ import br.com.case.model.User
 import br.com.case.service.UserService
 import org.springframework.http.HttpStatus.CREATED
 import org.springframework.http.HttpStatus.OK
+import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
+import javax.validation.Valid
 
-@RestController("users")
+@RestController
+@RequestMapping("users")
+@Validated
 class UserController(val userService: UserService, val userConverter: UserConverter) {
 
     @GetMapping("/{id}")
@@ -19,7 +23,7 @@ class UserController(val userService: UserService, val userConverter: UserConver
 
     @PostMapping
     @ResponseStatus(CREATED)
-    fun save(@RequestBody request: UserRequest): UserResponse {
+    fun save(@Valid @RequestBody request: UserRequest): UserResponse {
         return userConverter.toResponse(userService.save(userConverter.toModel(request)))
     }
 
