@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Dserver.port=8080 -jar build/libs/case-0.0.1-SNAPSHOT.jar
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar build/libs/case-0.0.1-SNAPSHOT.jar
