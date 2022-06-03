@@ -31,14 +31,15 @@ dependencies {
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation("org.springdoc:springdoc-openapi-data-rest:1.6.0")
-    implementation("org.springdoc:springdoc-openapi-ui:1.6.0")
-    implementation("org.springdoc:springdoc-openapi-kotlin:1.6.0")
+    implementation("org.springdoc:springdoc-openapi-data-rest:1.6.8")
+    implementation("org.springdoc:springdoc-openapi-ui:1.6.8")
+    implementation("org.springdoc:springdoc-openapi-kotlin:1.6.8")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.h2database:h2:2.1.212")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("io.projectreactor:reactor-test")
+    testImplementation("com.ninja-squad:springmockk:3.1.1")
+
 }
 
 tasks.withType<KotlinCompile> {
